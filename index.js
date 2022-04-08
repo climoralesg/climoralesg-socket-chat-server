@@ -6,8 +6,8 @@ const SocketIO=require('socket.io');
 
 let port=process.env.PORT;
 console.log(port);
-app.set('port',process.env.PORT);
-console.log("Puerto en el " +app.get('port'));
+app.set('port in',process.env.PORT);
+console.log("Puerto visualizado en" +app.get('port'));
 const server=app.listen(app.get('port'),()=>{
     console.log('Servidor en puerto', app.get('port'));
 });
