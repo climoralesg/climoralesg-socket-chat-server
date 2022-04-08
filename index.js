@@ -4,7 +4,7 @@ const app=express();
 const path=require('path');
 const SocketIO=require('socket.io');
 
-let port=process.env.PORT;
+let port=process.env.PORT_APLICATION;
 console.log("Puerto en ",port);
 app.set('port in',process.env.PORT);
 console.log("Puerto visualizado en" +app.get('port'));
