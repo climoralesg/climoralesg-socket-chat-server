@@ -4,12 +4,12 @@ const app=express();
 const path=require('path');
 const SocketIO=require('socket.io');
 
-let port=process.env.PORT_APLICATION;
-console.log("Puerto en ",port);
-app.set('port in',process.env.PORT);
-console.log("Puerto visualizado en" +app.get('port'));
-const server=app.listen(app.get('port'),()=>{
-    console.log('Servidor en puerto', app.get('port'));
+let port=process.env.PORT_APLICATION || 4000;
+
+app.set('port',port);
+
+const server=app.listen(port,()=>{
+    console.log('Servidor en puerto', port);
 });
  
 const io=SocketIO(server);
