@@ -2,8 +2,9 @@ const express=require('express');
 const app=express();
 const path=require('path');
 const SocketIO=require('socket.io');
+require('dotenv').config();
 
-app.set('port',4040);
+app.set('port',process.env.PORT);
 
 const server=app.listen(app.get('port'),()=>{
     console.log('Servidor en puerto', app.get('port'));
