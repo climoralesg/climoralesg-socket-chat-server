@@ -4,9 +4,10 @@ const app=express();
 const path=require('path');
 const SocketIO=require('socket.io');
 
-
-app.set('port',4040);
-console.log("Puerto "+app.get('port'));
+let port=process.env.PORT;
+console.log(port);
+app.set('port',process.env.PORT);
+console.log("Puerto en el " +app.get('port'));
 const server=app.listen(app.get('port'),()=>{
     console.log('Servidor en puerto', app.get('port'));
 });
