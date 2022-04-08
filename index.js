@@ -5,7 +5,7 @@ const path=require('path');
 const SocketIO=require('socket.io');
 
 let port=process.env.PORT;
-console.log(port);
+console.log("Puerto en ",port);
 app.set('port in',process.env.PORT);
 console.log("Puerto visualizado en" +app.get('port'));
 const server=app.listen(app.get('port'),()=>{
