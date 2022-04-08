@@ -6,7 +6,7 @@ const SocketIO=require('socket.io');
 
 
 app.set('port',process.env.PORT);
-
+console.log("Puerto "+app.get('port'));
 const server=app.listen(app.get('port'),()=>{
     console.log('Servidor en puerto', app.get('port'));
 });
