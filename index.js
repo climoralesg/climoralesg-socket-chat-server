@@ -6,10 +6,13 @@ require('dotenv').config();
 
 app.set('port',4000);
 
+const server=app.listen(4000);
+
+/*
 const server=app.listen(4000,()=>{
     console.log('Servidor en puerto', app.get('port'));
 });
- 
+ */
 const io=SocketIO(server);
 
 io.on('connection',(socket)=>{
