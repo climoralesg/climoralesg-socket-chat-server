@@ -1,14 +1,13 @@
-require('dotenv').config();
 const express=require('express');
 const app=express();
 const path=require('path');
 const SocketIO=require('socket.io');
 
-let port=process.env.PORT_APLICATION || 4000;
+app.set('port',4040);
 
-app.set('port',port);
-
-const server=app.listen(port);
+const server=app.listen(process.env.PORT_APLICATION,()=>{
+    console.log('Servidor en puerto', process.env.PORT_APLICATION);
+});
  
 const io=SocketIO(server);
 
