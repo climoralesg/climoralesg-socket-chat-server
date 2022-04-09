@@ -8,7 +8,7 @@ const port=process.env.SOCKET_PORT || 3000;
 
 app.set('port',port);
 
-const server=app.listen(app.get('port'),'0.0.0.0',()=>{
+const server=app.listen(process.env.SOCKET_PORT || 3000,'0.0.0.0',()=>{
     console.log('Servidor en puerto', app.get('port'));
 });
  
