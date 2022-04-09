@@ -8,9 +8,7 @@ let port=process.env.PORT_APLICATION || 4000;
 
 app.set('port',port);
 
-const server=app.listen(port,()=>{
-    console.log('Servidor en puerto', port);
-});
+const server=app.listen(port);
  
 const io=SocketIO(server);
 
