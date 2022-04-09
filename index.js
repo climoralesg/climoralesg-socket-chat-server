@@ -4,11 +4,11 @@ const path=require('path');
 const SocketIO=require('socket.io');
 require('dotenv').config();
 
-const port=process.env.SOCKET_PORT || 3000;
+const port=process.env.PORT || 3000;
 
 app.set('port',port);
 
-const server=app.listen(process.env.SOCKET_PORT || 3000,'0.0.0.0',()=>{
+const server=app.listen(app.get('port'),()=>{
     console.log('Servidor en puerto', app.get('port'));
 });
  
