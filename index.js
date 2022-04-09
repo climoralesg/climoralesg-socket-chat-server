@@ -2,6 +2,7 @@ const express=require('express');
 const app=express();
 const path=require('path');
 const SocketIO=require('socket.io');
+require('dotenv').config();
 
 app.set('port',process.env.PORT);
 
