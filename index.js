@@ -3,10 +3,10 @@ const app=express();
 const path=require('path');
 const SocketIO=require('socket.io');
 
-app.set('port',4040);
+app.set('port',process.env.PORT);
 
-const server=app.listen(process.env.PORT_APLICATION,()=>{
-    console.log('Servidor en puerto', process.env.PORT_APLICATION);
+const server=app.listen(app.get('port'),()=>{
+    console.log('Servidor en puerto', app.get('port'));
 });
  
 const io=SocketIO(server);
